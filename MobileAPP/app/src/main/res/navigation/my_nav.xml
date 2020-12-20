@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/home_page2">
+
+    <fragment
+        android:id="@+id/home_page2"
+        android:name="com.example.cartracker.Home_page"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_home_page2_to_car_page2"
+            app:destination="@id/car_page2" />
+    </fragment>
+    <fragment
+        android:id="@+id/car_page2"
+        android:name="com.example.cartracker.car_page"
+        android:label="fragment_car_page"
+        tools:layout="@layout/fragment_car_page" >
+        <action
+            android:id="@+id/action_car_page2_to_home_page2"
+            app:destination="@id/home_page2" />
+    </fragment>
+    <fragment
+        android:id="@+id/trajet_page"
+        android:name="com.example.cartracker.Trajet_page"
+        android:label="fragment_trajet_page"
+        tools:layout="@layout/fragment_trajet_page" />
+    <fragment
+        android:id="@+id/rappels"
+        android:name="com.example.cartracker.Rappels"
+        android:label="fragment_rappels"
+        tools:layout="@layout/fragment_rappels" />
+</navigation>

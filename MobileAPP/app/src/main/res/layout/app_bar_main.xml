@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu_drawer">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.CarTracker.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/dark_gray"
+            app:popupTheme="@style/Theme.CarTracker.PopupOverlay" />
+        <include layout="@layout/content_main"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:background="@color/yellow"
+        app:backgroundTint="@color/yellow"
+        app:srcCompat="@android:drawable/ic_dialog_alert" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom|end"
+        android:background="@drawable/dark_background"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemTextColor="@color/yellow"
+        app:itemIconTint="@color/yellow"
+        />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

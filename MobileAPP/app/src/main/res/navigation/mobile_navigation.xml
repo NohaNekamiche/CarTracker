@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.cartracker.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.cartracker.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.cartracker.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_addFuel"
+        android:name="com.example.cartracker.ui.addFuel.addFuelFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_add_fuel" />
+    <fragment
+        android:id="@+id/nav_about_us"
+        android:name="com.example.cartracker.ui.About_Us.AboutUsFragment"
+        android:label="aboutUs"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/nav_setting"
+        android:name="com.example.cartracker.ui.Rappels.RappelsFragment"
+        android:label="fragment_rappels"
+        tools:layout="@layout/fragment_rappels" />
+    <fragment
+        android:id="@+id/nav_reminder"
+        android:name="com.example.cartracker.Rappels"
+        android:label="fragment_rappels"
+        tools:layout="@layout/fragment_rappels" />
+    <fragment
+        android:id="@+id/nav_trajet"
+        android:name="com.example.cartracker.Rappels"
+        android:label="fragment_trajet"
+        tools:layout="@layout/fragment_trajet_page" />
+
+    <fragment
+        android:id="@+id/nav_repport"
+        android:name="com.example.cartracker.Rappels"
+        android:label="fragment_trajet"
+        tools:layout="@layout/fragment_trajet_page" />
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.cartracker.ui.home.HomeFragment"
+        android:label="fragment_accieul"
+        tools:layout="@layout/fragment_home"/>
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.cartracker.Rappels"
+        android:label="fragment_accieul"
+        tools:layout="@layout/fragment_trajet_page"/>
+    <fragment
+        android:id="@+id/navigation_car"
+        android:name="com.example.cartracker.Rappels"
+        android:label="fragment_accieul"
+        tools:layout="@layout/fragment_rappels"/>
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.cartracker.Rappels"
+        android:label="fragment_accieul"
+        tools:layout="@layout/fragment_rappels"/>
+
+</navigation>

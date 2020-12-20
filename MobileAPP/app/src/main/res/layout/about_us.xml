@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/about_us"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        ></RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:background="@drawable/card_background"
+        >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="36dp"
+            android:background="@drawable/ic_previous"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="130dp"
+            android:text="@string/about_us"
+            android:textStyle="bold"
+            android:textColor="@color/yellow"
+            android:textSize="20sp"
+            android:fontFamily="@font/helvetica_bold"/>
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/logo" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="400dp"
+            android:layout_marginLeft="130dp"
+            android:text="@string/us"
+            android:textStyle="bold"
+            android:textColor="@color/dark_gray"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:fontFamily="@font/helvetica_bold"/>
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="450dp"
+            android:layout_marginLeft="90dp"
+            android:background="@drawable/facebook_logo"
+            />
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="450dp"
+            android:layout_marginLeft="172dp"
+            android:background="@drawable/instgram"
+            />
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="450dp"
+            android:layout_marginLeft="250dp"
+            android:background="@drawable/twitter"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="550dp"
+            android:layout_marginLeft="130dp"
+            android:text="@string/version"
+            android:textStyle="bold"
+            android:textColor="@color/dark_gray"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:fontFamily="@font/helvetica_light"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="580dp"
+            android:layout_marginLeft="130dp"
+            android:text="@string/update"
+            android:textStyle="bold"
+            android:textColor="@color/dark_gray"
+            android:layout_centerHorizontal="true"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/helvetica_light"
+            android:gravity="center_horizontal" />
+
+    </RelativeLayout>
+
+</LinearLayout>

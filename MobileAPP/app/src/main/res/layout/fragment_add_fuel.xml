@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.addFuel.addFuelFragment">
+    <TextView
+        android:id="@+id/text_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:text="@string/ajouterFeul"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_horizontal" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/card_background"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="840dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/mat"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableStart="@drawable/ic_car"
+                android:drawableLeft="@drawable/ic_car"
+                android:fontFamily="@font/helvetica_light"
+                android:hint="@string/status"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp" />
+
+            <EditText
+                android:id="@+id/cpt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableStart="@drawable/ic_speed"
+                android:drawableLeft="@drawable/ic_speed"
+                android:fontFamily="@font/helvetica_light"
+                android:hint="@string/speed"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp" />
+
+            <EditText
+                android:id="@+id/status"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableStart="@drawable/ic_status"
+                android:drawableLeft="@drawable/ic_status"
+                android:fontFamily="@font/helvetica_light"
+                android:hint="@string/status"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/fuel"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="40dp"
+                    android:background="@drawable/edit_text_background"
+                    android:drawableLeft="@drawable/ic_fuel"
+                    android:fontFamily="@font/helvetica_light"
+                    android:hint="@string/dprise"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="26dp"
+                    android:paddingRight="26dp"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/fuelType"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_text_background"
+                    android:fontFamily="@font/helvetica_light"
+                    android:hint="@string/heureprise"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="26dp"
+                    android:paddingRight="26dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/prix"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="40dp"
+                    android:background="@drawable/edit_text_background"
+                    android:drawableLeft="@drawable/ic_cmoney"
+                    android:fontFamily="@font/helvetica_light"
+                    android:hint="@string/dprise"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="26dp"
+                    android:paddingRight="26dp"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/totalPrix"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_text_background"
+                    android:drawableLeft="@drawable/ic_cmoney"
+                    android:fontFamily="@font/helvetica_light"
+                    android:hint="@string/heureprise"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="26dp"
+                    android:paddingRight="26dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/date"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="40dp"
+                    android:background="@drawable/edit_text_background"
+                    android:drawableLeft="@drawable/ic_fuel"
+                    android:fontFamily="@font/helvetica_light"
+                    android:hint="@string/dprise"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="26dp"
+                    android:paddingRight="26dp"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/temps"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_text_background"
+                    android:drawableLeft="@drawable/ic_time"
+                    android:fontFamily="@font/helvetica_light"
+                    android:hint="@string/heureprise"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="26dp"
+                    android:paddingRight="26dp" />
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/dremise"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableStart="@drawable/ic_calendar"
+                android:drawableLeft="@drawable/ic_calendar"
+                android:fontFamily="@font/helvetica_light"
+                android:hint="@string/dremise"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp" />
+
+            <EditText
+                android:id="@+id/tabPic"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@drawable/ic_camera"
+                android:fontFamily="@font/helvetica_light"
+                android:hint="@string/tableauBord"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp" />
+
+            <EditText
+                android:id="@+id/pic"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableStart="@drawable/ic_camera"
+                android:drawableLeft="@drawable/ic_speed"
+                android:fontFamily="@font/helvetica_light"
+                android:hint="@string/picVoiture"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="450dp"
+            android:layout_marginBottom="250dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/back_to_login"
+                android:layout_width="200dp"
+                android:layout_height="45dp"
+                android:background="@drawable/custom_btn"
+                android:fontFamily="@font/helvetica_bold"
+                android:gravity="center"
+                android:text="@string/ajouter"
+                android:textAlignment="center"
+                android:textColor="@color/dark_gray"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/yellow"
+                app:strokeColor="@color/yellow" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

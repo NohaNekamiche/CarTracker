@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/inscription_background"
+    tools:context=".authentification.Inscription_page">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        ></RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:background="@drawable/card_background"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:layout_marginLeft="36dp"
+            android:text="@string/inscr"
+            android:textStyle="bold"
+            android:textColor="@color/yellow"
+            android:textSize="35sp"
+            android:fontFamily="@font/helvetica_bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/nom"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@drawable/ic_user"
+                android:fontFamily="@font/helvetica_light"
+                android:hint="  |  Nom"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp" />
+
+            <EditText
+                android:id="@+id/prenom"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@drawable/ic_user"
+                android:fontFamily="@font/helvetica_light"
+                android:hint="  |  Prenom"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@drawable/ic_user"
+                android:fontFamily="@font/helvetica_light"
+                android:hint="  |  Email"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp" />
+
+            <EditText
+                android:id="@+id/pw"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@drawable/ic_lock"
+                android:drawableRight="@drawable/ic_invisible"
+                android:fontFamily="@font/helvetica_light"
+                android:hint="  |  Password"
+                android:inputType="textPassword"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp" />
+
+            <EditText
+                android:id="@+id/dateNaiss"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@drawable/ic_calendar"
+                android:fontFamily="@font/helvetica_light"
+                android:hint="  |  Date De Naissance"
+                android:inputType="date"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp" />
+
+            <EditText
+                android:id="@+id/numSerie"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@drawable/ic_card"
+                android:fontFamily="@font/helvetica_light"
+                android:hint="  |  N Serie De Permis"
+                android:inputType="numberDecimal"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp" />
+            <EditText
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@drawable/ic_phone"
+                android:fontFamily="@font/helvetica_light"
+                android:hint="  |  Tel"
+                android:inputType="numberDecimal"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp" />
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@drawable/ic_camera"
+                android:fontFamily="@font/helvetica_light"
+                android:hint="  |  Photo De Driver"
+                android:inputType="numberDecimal"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp" />
+            <ImageView
+                android:id="@+id/imgPermis"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@drawable/ic_camera"
+                android:fontFamily="@font/helvetica_light"
+                android:hint="  |  Photo De Permis"
+                android:inputType="numberDecimal"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp" />
+
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="6dp"
+                android:text="@string/instruction" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="550dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="80dp">
+
+            <Button
+                android:id="@+id/go_to_login"
+                android:layout_width="200dp"
+                android:layout_height="45dp"
+                android:background="@drawable/custom_btn"
+                android:text="@string/se_connecter"
+                android:textColor="@color/dark_gray"
+                android:fontFamily="@font/helvetica_bold"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                app:backgroundTint="@color/yellow"
+                app:strokeColor="@color/yellow" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

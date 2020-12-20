@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/car"
+            android:title="@string/take_car" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:title="Deposer Voiture"
+            android:icon="@drawable/car" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:title="Service De Maintenance"
+            android:icon="@drawable/fuel"/>
+        <item
+            android:title="Ajouter Carburant"
+            android:icon="@drawable/fuel"
+            android:id="@+id/nav_addFuel"
+            />
+        <item
+            android:title="Rappels"
+            android:icon="@drawable/bell"
+            android:id="@+id/nav_reminder"
+            />
+        <item
+            android:title="Ajouter Trajet"
+            android:icon="@drawable/delivery"
+            android:id="@+id/nav_trajet"
+            />
+    </group>
+    <item android:title=""
+        >
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:title="Paramètres"
+                    android:icon="@drawable/settings"
+                    android:id="@+id/nav_setting"
+                    />
+                <item
+                    android:title="@string/about_us"
+                    android:icon="@drawable/exclamation"
+                    android:id="@+id/nav_about_us"
+                    />
+                <item
+                    android:title="@string/repport"
+                    android:icon="@drawable/help"
+                    android:id="@+id/nav_repport"
+                    />
+                <item
+                    android:title="LogOut"
+                    android:icon="@drawable/logout"
+                    android:id="@+id/logout"
+                    />
+            </group>
+        </menu>
+    </item>
+</menu>
