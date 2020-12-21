@@ -95,13 +95,18 @@ export default {
   data () {
     return {
       clipped: false,
-      drawer: false,
-      fixed: false,
+      drawer: true,
+      fixed: true,
       items: [
+        {
+          icon: 'mdi-apps',
+          title: 'Table de Bord',
+          to: '/home'
+        },
          {
           icon: 'mdi-apps',
           title: 'Drivers',
-          to: '/'
+          to: '/DriversTable'
         },
         {
           icon: 'mdi-car',
@@ -112,7 +117,7 @@ export default {
         {
           icon: 'mdi-chart-bubble',
           title: 'Ajouter Voiture',
-          to: '/inspire'
+          to: '/AffecterCar'
         },
         {
           icon: 'mdi-chart-bubble',
@@ -132,15 +137,20 @@ export default {
         ,{
           icon: 'mdi-logout',
           title:'Se Deconnecter',
-          to:'/inspire'
+          to:'/'
         }
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Vuetify.js'
+      title: 'Admin'
     }
   }
 }
 </script>
+<style scoped>
+h4,h5{
+  color: white;
+}
+</style>
    

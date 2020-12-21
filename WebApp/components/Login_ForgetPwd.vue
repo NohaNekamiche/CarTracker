@@ -1,23 +1,129 @@
 <template>
   <v-stepper v-model="e1">
     <v-stepper-items>
-      <v-stepper-content step="1">     
+      <v-stepper-content step="1">   
+          <v-row>
+      <v-col
+          cols="12"
+          md="6"
+        >  
           <v-card
-          width="800px"
-            color="#f2f2f2"
+          class="rounded-card1"
+          width="600px"
+            color="#333333"
             height="500px"
           >
+          <v-card-title> <h3 style="text-align:center;">Bienvenue</h3></v-card-title>
+          <v-card-text>
+            <div>
           <v-form
+          
                         ref="form"
                         v-model="valid"
                         lazy-validation
+                        
+                      >
+                      <v-icon color="white"> mdi-user</v-icon>
+                    <v-text-field
+                      v-model="email"
+                      :rules="emailRules"
+                      label="E-mail"
+                      required
+                     solo
+                     
+                     
+                    >
+                    </v-text-field>
+                    <v-text-field
+                      v-model="password"
+                      :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+                      :rules="[rules.required, rules.min]"
+                      :type="show1 ? 'text' : 'password'"
+                      name="input-10-1"
+                      label="Normal with hint text"
+                      hint="At least 8 characters"
+                      counter
+                      @click:append="show1 = !show1"
+                      solo
+                    ></v-text-field>
+                    </v-form>
+                    </div>
+                        <v-btn
+              color="#FAC606"
+             
+              rounded
+              to="/home"
+            >
+              Se Connecter
+            </v-btn>
+            <v-btn text
+            color="#FAC606"
+            @click="e1 =2"
+              rounded>
+              Changer Mot De passe
+            </v-btn>
+       
+          </v-card-text>
+                <v-card-actions>
+    
+                </v-card-actions>
+              </v-card>
+  
+      </v-col>
+        <v-col
+          cols="12"
+          md="6"
+        > 
+        <v-img src="/carPic.png"></v-img>
+        </v-col>
+      </v-row>
+      </v-stepper-content>
+
+      <v-stepper-content step="2">
+        <v-row>
+          <v-col
+          cols="12"
+          md="6"
+        > 
+        <v-img src="/carPic.png"></v-img>
+        </v-col>
+          <v-col
+          cols="12"
+          md="6"
+        > 
+        <v-card
+          width="800px"
+            color="#333333"
+            height="500px"
+            class="rounded-card2"
+        >
+         <v-card-title> <h3 style="text-align:center;">Bienvenue</h3></v-card-title>
+        <v-card-text>
+          <v-form
+          
+                        ref="form"
+                        v-model="valid"
+                        lazy-validation
+                        
                       >
                     <v-text-field
                       v-model="email"
                       :rules="emailRules"
                       label="E-mail"
                       required
-                      outlined
+                     solo
+                    ></v-text-field>
+                     <v-text-field
+                      v-model="password"
+                      :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+                      :rules="[rules.required, rules.min]"
+                      :type="show1 ? 'text' : 'password'"
+                      name="input-10-1"
+                      label="Normal with hint text"
+                      hint="At least 8 characters"
+                      counter
+                      @click:append="show1 = !show1"
+                      solo
                     ></v-text-field>
                     <v-text-field
                       v-model="password"
@@ -29,61 +135,29 @@
                       hint="At least 8 characters"
                       counter
                       @click:append="show1 = !show1"
-                      outlined
+                      solo
                     ></v-text-field>
                     </v-form>
-             
-                <v-card-actions>
-                  <v-btn
-                    outlined
-                    rounded
-                    text
-                  >
-                    Button
-                  </v-btn>
-                </v-card-actions>
-              </v-card>
-            <v-card-actions>  
-              <v-btn
-              color="primary"
-              @click="e1 = 2"
-            >
-              Continue
-            </v-btn>
-
-            <v-btn
-              color="primary"
-              to="/carstable"
-            >
-              login
-            </v-btn>
-            </v-card-actions>
-    
-        
-      </v-stepper-content>
-
-      <v-stepper-content step="2">
-        <v-card
-          class="mb-12"
-          color="grey lighten-1"
-          height="500px"
-        >
-        <v-card-text>
+  
            <v-btn
-          color="primary"
+          color="#FAC606"
           @click="e1 = 1"
+          rounded
         >
           Continue
         </v-btn>
-        <v-btn text>
+        <v-btn text
+        color="#FAC606"
+         @click="e1 = 1"
+          rounded>
           Cancel
         </v-btn>
         </v-card-text>
         
         
         </v-card>
-
-       
+          </v-col>
+        </v-row>
       </v-stepper-content>
 
     </v-stepper-items>
@@ -116,3 +190,25 @@
     },
   }
 </script>
+<style scoped>
+h3{
+  font: bold;
+  color:#FAC606 ;
+  text-align: center;
+  margin-top: 20%;
+  align-content: center;
+}
+.v-form{
+max-width: 400px;
+align-items: center;
+}
+.rounded-card1{
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+}
+.rounded-card2
+{
+  border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+}
+</style>

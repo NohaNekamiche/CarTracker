@@ -1,4 +1,6 @@
 <template>
+<v-container>
+  <NavMenu/>
   <v-row justify="center">
       <v-card color="#F2F2F2" >
         <v-card-title>
@@ -193,14 +195,16 @@
         </v-card-actions>
       </v-card>
   </v-row>
-
+</v-container>
 </template>
 
 <script>
 import NavMenu from '~/components/NavMenu.vue'
+import axios from 'axios'
+
   export default {
      components:{
-         
+            NavMenu,
      }, 
     data: () => ({
       dialog: false,
@@ -216,6 +220,9 @@ import NavMenu from '~/components/NavMenu.vue'
         nbval:null,
         values:null,
         Modelvalues:null,
+        formdata:{
+          
+        }
     }),
     computed: {
       fromDateDisp() {
@@ -227,6 +234,17 @@ import NavMenu from '~/components/NavMenu.vue'
           return this.toDateVal
       }
     },
+     methods:{
+      save(){
+        let car=this.formdata;
+        console.log(car);
+        axios.post('http://127.0.0.1:8000/api/envoyerAlerte',car)
+       .catch(function (error){
+         console.log(error);
+       })
+       dialog:false;
+      }
+    }
   }
 </script>
 <style scoped>

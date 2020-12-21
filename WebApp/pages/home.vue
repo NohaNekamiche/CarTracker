@@ -62,7 +62,7 @@ export default {
          {
           icon: 'mdi-apps',
           title: 'Drivers',
-          to: '/'
+          to: '/DriversTable'
         },
         {
           icon: 'mdi-car',

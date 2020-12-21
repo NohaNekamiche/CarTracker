@@ -9,9 +9,11 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "bootstrap": "^4.5.3",
     "core-js": "^3.6.5",
     "jspdf": "^2.2.0",
-    "nuxt": "^2.14.6"
+    "nuxt": "^2.14.6",
+    "vue-google-signin-button-directive": "^1.0.3"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.11.2",

@@ -65,28 +65,27 @@
             cols="12"
             md="4"
           >
-            <v-text-field
-              v-model="editedItem.name"
-              :rules="nameRules"
-              :counter="20"
-              label="Marque"
-              placeholder="VOLKSWAGEN"
-              outlined
-            ></v-text-field>
+            <v-autocomplete
+            v-model="values"
+            :items="MarqueItems"
+            outlined
+            color="#FAC606"
+            label="Marque*"
+          ></v-autocomplete>
           </v-col>
 
           <v-col
             cols="12"
             md="4"
           >
-            <v-text-field
-              v-model="editedItem.calories"
-              :rules="nameRules"
-              :counter="20"
-              label="Marque"
-              placeholder="VOLKSWAGEN"
-              outlined
-            ></v-text-field>
+          <v-autocomplete
+            v-model="Modelvalues"
+            :items="ModeleItems"
+            outlined
+            color="#FAC606"
+            label="Modele*"
+          ></v-autocomplete>
+             
           </v-col>
 
           <v-col
@@ -96,7 +95,6 @@
             <v-text-field
               v-model="editedItem.fat"
               :rules="nameRules"
-              color="#fff"
               :counter="20"
               label="Matricule"
               placeholder="13352 110 16"
@@ -140,38 +138,39 @@
           >
             <v-select
             v-model="editedItem.carbs"
+                    :items="['Super', 'Normal','sans-plomb','gazole']"
+                    label="Type Carburant*"
+                  required
+                    outlined
+                  ></v-select>
+          </v-col>
+        </v-row>  
+        <v-row>
+           <v-col
+            cols="12"
+            md="4"
+          >
+            <v-select
+            v-model="editedItem.carbs"
+                    :items="['Netfer Smart Solutions', 'Harizi']"
+                    label="Proprietaire*"
+                  required
+                    outlined
+                  ></v-select>
+          </v-col> 
+        <v-col
+            cols="12"
+            md="4"
+          >
+            <v-select
+            v-model="editedItem.carbs"
                     :items="['Bonne', 'En Maintenance']"
                     label="Status*"
                   required
                     outlined
                   ></v-select>
           </v-col>
-        </v-row>
-      
-            
-        <v-row>
-            <v-col
-            cols="12"
-            md="10">
-          <v-file-input
-          
-              label="Photo de voiture"
-              outlined
-              prepend-icon="mdi-camera"
-          ></v-file-input>
-          </v-col>
-          <v-col
-            cols="12"
-            md="10">
-          <v-file-input
-              label="Photo de tableau de bord"
-              outlined
-              prepend-icon="mdi-camera"
-          ></v-file-input>
-          </v-col>
-      
-        </v-row>
-        
+        </v-row>        
       </v-container>
     </v-form>
             <small>*indicates required field</small>
@@ -227,6 +226,12 @@ import NavMenu from '~/components/NavMenu.vue'
     data: () => ({
       dialog: false,
       dialogDelete: false,
+       MarqueItems:['Renault','Peugeot','Citroën','Dacia','Volkswagen','Toyota','Fiat','Ford'],
+        ModeleItems:['Clio IV','208','3008 II','C3 III','Sandero','2008','Twingo III','Mégane IV','Duster 2','C3 Aircross','Polo','Yaris','500','Golf VII'],
+        NbBonsItems:['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20'],
+        nbval:null,
+        values:null,
+        Modelvalues:null,
       search: '',
       headers: [
         {
@@ -355,3 +360,8 @@ import NavMenu from '~/components/NavMenu.vue'
     },
   }
 </script>
+<style scoped>
+.v-text-field,.v-autocomplete{
+  color: #FAC606;
+}
+</style>

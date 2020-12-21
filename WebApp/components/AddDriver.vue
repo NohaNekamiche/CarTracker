@@ -36,8 +36,8 @@
             v-model="firstname"
             :rules="nameRules"
             :counter="20"
-            label="Marque"
-            placeholder="VOLKSWAGEN"
+            label="Nom"
+            placeholder="Nekamiche"
             outlined
           ></v-text-field>
         </v-col>
@@ -50,8 +50,8 @@
             v-model="firstname"
             :rules="nameRules"
             :counter="20"
-            label="Marque"
-            placeholder="VOLKSWAGEN"
+            label="Prenom"
+            placeholder="Noha"
             outlined
           ></v-text-field>
         </v-col>
@@ -60,16 +60,38 @@
           cols="12"
           md="4"
         >
-          <v-text-field
-            v-model="firstname"
-            :rules="nameRules"
-            color="#fff"
-            :counter="20"
-            label="Matricule"
-            placeholder="13352 110 16"
-            outlined
-          ></v-text-field>
-        </v-col>
+           
+                <v-layout  wrap>
+                    <v-menu
+                    v-model="fromDateMenu"
+                    :close-on-content-click="false"
+                    :nudge-right="40"
+                    lazy
+                    transition="scale-transition"
+                    offset-y
+                    
+                    >
+                    <template v-slot:activator="{ on }">
+                        <v-text-field
+                        label="Date De Prise"
+                        prepend-inner-icon="mdi-calendar"
+                        outlined
+                        color="#FAC606"
+                        :value="fromDateDisp"
+                        v-on="on"
+                        
+                        ></v-text-field>
+                    </template>
+                    <v-date-picker
+                        locale="en-in"
+                        
+                        v-model="fromDateVal"
+                        no-title
+                        @input="fromDateMenu = false"
+                    ></v-date-picker>
+                    </v-menu>
+                </v-layout>
+         </v-col>
       </v-row>
       <v-row>
           
@@ -81,8 +103,8 @@
             v-model="firstname"
             :rules="nameRules"
             :counter="20"
-            label="Compteur Odomètre"
-            placeholder="123 (KM)"
+            label="N° serie de Permis"
+            placeholder="13325565"
             outlined
           ></v-text-field>
         </v-col>
@@ -96,52 +118,13 @@
             :rules="nameRules"
             color="#fff"
             :counter="20" 
-            label="Carburant"
-            placeholder="60 (L)"
+            label="N° Tel"
+            placeholder="05 55 46 66 78 "
             outlined
           ></v-text-field>
         </v-col>
-        <v-col
-          cols="12"
-          md="4"
-        >
-           <v-select
-                  :items="['Bonne', 'En Maintenance']"
-                  label="Status*"
-                required
-                  outlined
-                ></v-select>
-        </v-col>
+       
       </v-row>
-     
-          
-      <v-row>
-          <v-col
-          cols="12"
-          md="10">
-        <v-file-input
-            label="Photo de voiture"
-            outlined
-            prepend-icon="mdi-camera"
-        ></v-file-input>
-         </v-col>
-         <v-col
-          cols="12"
-          md="10">
-        <v-file-input
-            label="Photo de tableau de bord"
-            outlined
-            prepend-icon="mdi-camera"
-        ></v-file-input>
-         </v-col>
-     
-      </v-row>
-       <v-row justify="center">   
-             <v-col
-          cols="12"
-          md="10">
-          <v-btn color="#FAC606" >Sauvegarder</v-btn>
-          </v-col></v-row>
     </v-container>
   </v-form>
           <small>*indicates required field</small>
@@ -149,18 +132,18 @@
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn
-            color="blue darken-1"
+            color="#FAC606"
             text
             @click="dialog = false"
           >
-            Close
+            Fermer
           </v-btn>
           <v-btn
-            color="blue darken-1"
+            color="#FAC606"
             text
             @click="dialog = false"
           >
-            Save
+            Sauvegarder
           </v-btn>
         </v-card-actions>
       </v-card>
@@ -171,6 +154,15 @@
   export default {
     data: () => ({
       dialog: false,
+       fromDateMenu: false,
+        fromDateVal: null,
     }),
+    computed:{
+      fromDateDisp() {
+        return this.fromDateVal;
+        // format date, apply validations, etc. Example below.
+        // return this.fromDateVal ? this.formatDate(this.fromDateVal) : "";
+      },
+    }
   }
 </script>
